@@ -509,7 +509,7 @@ const MaterialSelection = ({onExportPDF}) => {
     try {
         console.log("here",cleanedItems);
         const response = await axios.put(
-          `https://13.202.225.45:5000/api/components/combined/${id}`,
+          `/api/components/combined/${id}`,
           { items: cleanedItems }, // The request body is passed directly as the second argument
           {
             headers: {
@@ -582,7 +582,7 @@ const MaterialSelection = ({onExportPDF}) => {
     console.log(updatedBOItem);
     try {
       const response = await axios.put(
-        `https://13.202.225.45:5000/api/components/combined-details/${id}`, 
+        `/api/components/combined-details/${id}`, 
         { items: updatedItems },  // Passing the request body as the second argument
         {
           headers: {
